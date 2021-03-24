@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        #refresh
+        {
+            color: #05ddb4;
+            text-align: center;
+            font-size: 95px;
+            margin-top: 35px;
+            font-family: cursive;
+            font-weight:1800px;
+        }
+        body
+        {
+            background-color: #0e3344;
+        }
+        .player
+        {
+            display: inline;
+            color: #05ddb4;
+            margin: 45px;
+            font-size: 35px;
+            font-family: cursive;
+            font-weight: 900;
+        }
+        .players
+        {
+            text-align: center;
+        }
+        .diceimages
+        {
+            padding-left: 45px;
+            background-color: burlywood;
+            margin: 25px;
+            position:relative;      
+            width: 50%;      
+            margin-left:25%;
+            margin-top: 5%;
+            align-items: center;
+                        
+        }
+        .imgdice
+        {
+            margin: 24px;
+        
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is a title</title>
+   
+
+</head>
+<body>
+    <div class="main-class">
+        <h1 id="refresh">Refresh me</h1>
+    <div class="players">
+        <h2 class="player">Player 1</h2>
+    <h2 class="player">Player 1</h2>
+    </div>
+    <div class="diceimages">
+        <img id="img1" src="Angela_dice/Starting Files/images/dice6.png" alt="dice1" class="imgdice">
+        <img  id="img2" src="Angela_dice/Starting Files/images/dice6.png" alt="dice2" class="imgdice">
+    </div>
+    </div>
+ <script>
+    var randomno=Math.floor(Math.random()*6)+1;
+    var randomno2=Math.floor(Math.random()*6)+1;
+    var randomimg="Angela_dice/Starting Files/images/dice"+randomno+".png";
+    var randomimg2="Angela_dice/Starting Files/images/dice"+randomno2+".png";
+     document.querySelector("#img1").setAttribute("src",randomimg);
+     document.querySelector("#img2").setAttribute("src",randomimg2);
+    if(randomno>randomno2)
+    {
+        document.getElementById("refresh").innerHTML="Player 1 Wins";
+    }
+    else if(randomno<randomno2)
+    {
+        document.getElementById("refresh").innerHTML="Player 2 Wins";   
+    }
+    else{
+        document.getElementById("refresh").innerHTML="It's A Draw";
+    }
+ </script>
+</body>
+</html>
